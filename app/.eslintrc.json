@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "../.eslintrc.json",
+    "airbnb-typescript/base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "ignorePatterns": ["**/*.js"],
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "project": ["app/tsconfig.json"],
+    "sourceType": "module"
+  },
+  "plugins": ["import", "@typescript-eslint/eslint-plugin"],
+  "rules": {
+    "@typescript-eslint/interface-name-prefix": "off",
+    "class-methods-use-this": "warn",
+    "@typescript-eslint/no-unused-vars": "error"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "extends": [
+    "../.eslintrc.json",
+    "plugin:vue/recommended"
+  ],
+  "env": {
+    "browser": true
+  },
+  "ignorePatterns": ["js"],
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "extraFileExtensions": [
+      ".vue"
+    ]
+  },
+  "plugins": [
+    "import",
+    "@typescript-eslint/eslint-plugin"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".ts"
+        ]
+      },
+      "typescript": {
+        "project": ["client/tsconfig.json"]
+      }
+    }
+  },
+  "rules": {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "ts": "never"
+      }
+    ],
+    "class-methods-use-this": "off"
+  }
+}

@@ -1,0 +1,13 @@
+.DS_Store
+node_modules
+config/config.yaml
+test/htmlSpec.html
+newrelic_agent.log
+dump.rdb
+.eslintcache
+.idea
+yarn-error.log
+.env
+.env.test
+public
+dist
