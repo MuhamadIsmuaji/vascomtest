@@ -1,0 +1,16 @@
+extend layout
+
+block page
+  .container.mt-5
+    .row
+      .col-md-4.offset-md-4
+        form
+          h1.text-center.mb-5 Sign in
+          .mb-3
+            label.form-label Email
+            input.form-control(type="email")
+          .mb-3
+            label.form-label Password
+            input.form-control(type="password")
+          .d-grid
+            button.btn.btn-primary.btn-lg Sign in

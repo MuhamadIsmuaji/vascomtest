@@ -29,7 +29,6 @@ const getDbConfig = (): SequelizeModuleOptions => {
     synchronize: false,
   };
 
-  // NOTE: this options might slightly decrease performance during development
   const syncOptions: Partial<SequelizeModuleOptions> = {
     synchronize: true,
     sync: {

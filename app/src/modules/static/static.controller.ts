@@ -8,6 +8,16 @@ class StaticController {
   public home(@Req() req: Request, @Res() res: Response): void {
     res.render("home");
   }
+
+  @Get("/join")
+  public join(@Req() req: Request, @Res() res: Response): void {
+    res.render("join");
+  }
+
+  @Get("/login")
+  public login(@Req() req: Request, @Res() res: Response): void {
+    res.render("signin");
+  }
 }
 
 export default StaticController;

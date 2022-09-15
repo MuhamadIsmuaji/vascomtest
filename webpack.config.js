@@ -10,9 +10,13 @@ module.exports = {
   mode: process.env.NODE_ENV === "development" ? "development" : "production",
   context: path.join(__dirname, "client"),
   entry: {
-    app: {
-      import: ["./src/App.ts"],
-      filename: "app/app.js",
+    external: {
+      import: ["./src/External.ts"],
+      filename: "external/external.js",
+    },
+    styles: {
+      import: ["./scss/index.scss"],
+      filename: "styles/styles.css",
     },
   },
   output: {

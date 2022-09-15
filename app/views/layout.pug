@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+  head
+    title Vascomm App Test
+    link(rel="icon",type="image/png",href="/favicon.png?nocache="+NOCACHE)
+    link(rel="stylesheet", href="/styles.css?nocache="+NOCACHE, type="text/css")
+    link(href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&family=Roboto:wght@500" rel="stylesheet")
+    meta(name="viewport",id="viewport",content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+  body
+    nav.navbar.navbar-expand-md(style="background-color: #e3f2fd;")
+      .container
+        a.navbar-brand(href='/')
+          img(src="/favicon.png" width="104" height="50" alt="Vascomtest")
+        button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarNavDropdown', aria-controls='navbarNavDropdown', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        .d-flex.align-items-center.justify-content-center
+          a.btn.btn-primary.btn-sm.me-3(href="/join")
+            strong Join us
+          a.nav-link(href="/login", class=(url.indexOf("/login") ===0 ? "active":""))
+            span Sign in
+
+    .container
+      .row
+        block page
+    script(src='/external/external.js?nocache='+NOCACHE)

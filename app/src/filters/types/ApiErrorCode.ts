@@ -1,0 +1,8 @@
+enum ApiErrorCode {
+  BAD_REQUEST = "BAD_REQUEST",
+  INTERNAL_SERVER_ERROR = "INTERNAL_SERVER_ERROR",
+  NOT_FOUND = "NOT_FOUND",
+  UNAUTHORIZED = "UNAUTHORIZED",
+}
+
+export default ApiErrorCode;

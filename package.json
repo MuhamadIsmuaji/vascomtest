@@ -12,6 +12,7 @@
     "build": "yarn build:back && yarn build:front",
     "build:front": "NODE_ENV=production webpack",
     "build:back": "rimraf ./dist && tsc -p ./app/tsconfig.json && yarn postbuild:back && yarn migrations:validate",
+    "postbuild:back": "node ./dist/scripts/post-build.script.js",
     "dev": "yarn dev:back & yarn dev:front",
     "dev:front": "NODE_ENV=development webpack --watch & node config/bs.config.js",
     "dev:back": "nest start --watch -c ./app/nest-cli.json -p ./app/tsconfig.json",

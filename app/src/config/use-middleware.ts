@@ -47,8 +47,7 @@ const useMiddleware = (app: Application, redisService: RedisService): void => {
       resave: true,
       saveUninitialized: false,
       genid(req: Request): string {
-        // const userId = req.user?.id;
-        const userId = undefined;
+        const userId = req.user?.id;
         let genid = `_${makeHash(32)}`;
         if (userId !== undefined) {
           const hashedUserId = hashValue(userId);

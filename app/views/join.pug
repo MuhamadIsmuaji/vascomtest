@@ -1,0 +1,19 @@
+extend layout
+
+block page
+  .container.mt-5
+    .row
+      .col-md-4.offset-md-4
+        form
+          h1.text-center.mb-5 Let's join us
+          .mb-3
+            label.form-label Email
+            input.form-control#email(type="email")
+          .mb-3
+            label.form-label Name
+            input.form-control#name(type="text")
+          .mb-3
+            label.form-label Password
+            input.form-control#password(type="password")
+          .d-grid
+            a.btn.btn-primary.btn-lg#join Join
